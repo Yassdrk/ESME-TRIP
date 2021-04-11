@@ -54,6 +54,11 @@ npm start
 ```
 3) Tout fonctionne, vous pouvez dès à présent utiliser l'application Web (http://localhost:8080/). N'hésitez pas à me solliciter si vous avez une question sur le lancement du projet ou sur l'application en elle-même.
 
+### Aperçu de l'application
+
+![image](https://user-images.githubusercontent.com/82156431/114305889-4c627100-9ada-11eb-90d6-d6dcd990197c.png)
+
+
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/yassine-derkaoui/
 [product-screenshot]: images/screenshot.png
