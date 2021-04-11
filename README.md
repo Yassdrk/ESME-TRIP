@@ -22,12 +22,12 @@
 
 Mon projet intitulé ESME TRIP permet aux agences de voyages de réaliser leur propre application web de réservations de voyages dynamique. L'application proposée est intuitive et réactive.
 Fonctionnalités incluses: 
-- Système d'inscription et de connexion
+- Système d'inscription et de connexion : authentification des utilisateurs avec mécanismes de sécurité standards (cookies, hashage de mots
+de passe)
 - Espace administrateur de gestion du site : gestion des voyages, des séjours et des utilisateurs
 - Recherche dynamique avec autosuggestion.
 
-Cette application fonctionne avec une API en NODEJS et une base de donnée gérée sur postgreSQL.
-
+L'interface web a été réalisée en HTML5/CSS/Bootstrap et vuejs. Le serveur web dispose d'une API, développée en NODEJS.
 
 ### Comment lancer mon projet ?
 
