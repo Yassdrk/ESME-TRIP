@@ -31,7 +31,7 @@ L'interface web a été réalisée en HTML5/CSS/Bootstrap et vuejs. Le serveur w
 
 ### Comment lancer mon projet ?
 
-1) Rendez-vous à la racine de l'api qui se trouve dans le dossier API et installez les modules avec la commande suivante :
+1) Installez l'api qui se trouve dans le fichier ESME-TRIP-API.RAR à la racine du projet et installez les modules avec la commande suivante :
 ```
 npm install
 ```
