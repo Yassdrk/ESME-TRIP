@@ -29,7 +29,7 @@ Fonctionnalités incluses:
 Cette application fonctionne avec une API en NODEJS et une base de donnée gérée sur postgreSQL.
 
 
-## Project setup
+### Comment lancer mon projet ?
 ```
 npm install
 ```
