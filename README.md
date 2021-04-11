@@ -56,6 +56,7 @@ npm start
 
 ### Aperçu de l'application
 
+![image](https://user-images.githubusercontent.com/82156431/114306051-df9ba680-9ada-11eb-85ff-9000a4db4ca4.png)
 
 
 
