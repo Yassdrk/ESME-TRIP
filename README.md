@@ -55,12 +55,12 @@ npm start
 3) Tout fonctionne, vous pouvez dès à présent utiliser l'application Web (http://localhost:8080/). N'hésitez pas à me solliciter si vous avez une question sur le lancement du projet ou sur l'application en elle-même.
 
 ### Aperçu de l'application
+<p align="center">
 
 ![image](https://user-images.githubusercontent.com/82156431/114306051-df9ba680-9ada-11eb-85ff-9000a4db4ca4.png)
-
 ![image](https://user-images.githubusercontent.com/82156431/114306074-f3dfa380-9ada-11eb-9857-496881a00cc9.png)
 
-
+</p>
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
