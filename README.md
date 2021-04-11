@@ -52,7 +52,7 @@ npm install
 ```
 npm start
 ```
-3)Tout fonctionne, vous pouvez dès à présent utiliser l'application Web (http://localhost:8080/). N'hésitez pas à me solliciter si vous avez une question sur le lancement du projet ou sur l'application en elle-même.
+3) Tout fonctionne, vous pouvez dès à présent utiliser l'application Web (http://localhost:8080/). N'hésitez pas à me solliciter si vous avez une question sur le lancement du projet ou sur l'application en elle-même.
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/yassine-derkaoui/
