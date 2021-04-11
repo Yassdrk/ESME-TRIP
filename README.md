@@ -2,16 +2,15 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://github.com/malikotte/Projet-Dashboard/blob/main/src/covid.png" alt="Logo" width="80" height="80">
-  </a>
+  
+    <img src="https://raw.githubusercontent.com/Yassdrk/ESME-TRIP/main/src/assets/ESME%20TRIP.png" alt="Logo" width="80" height="80">
+ 
 
-  <h3 align="center">COVID-19</h3>
+  <h3 align="center">ESME TRIP</h3>
 
   <p align="center">
-    Application sur la pandémie de COVID-19
-  </p>
-  <p align="center"><b>Malik Derkaoui • Inès Djebra</b></p>
+ Application web de réservations de voyages</p>
+  <p align="center"><b>Yassine DERKAOUI</b></p>
 </p>
 ## Project setup
 ```
