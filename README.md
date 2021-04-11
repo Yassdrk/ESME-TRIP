@@ -30,6 +30,8 @@ Cette application fonctionne avec une API en NODEJS et une base de donnée gér�
 
 
 ### Comment lancer mon projet ?
+
+1) Rendez-vous à la racine de l'api qui se trouve dans la branche API et installez les modules avec la commande suivante :
 ```
 npm install
 ```
