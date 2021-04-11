@@ -3,7 +3,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://raw.githubusercontent.com/Yassdrk/ESME-TRIP/main/src/assets/ESME%20TRIP.png" alt="Logo" width="120" height="80">
+    <img src="https://raw.githubusercontent.com/Yassdrk/ESME-TRIP/main/src/assets/ESME%20TRIP.png" alt="Logo" width="150" height="80">
   </a>
     
  
