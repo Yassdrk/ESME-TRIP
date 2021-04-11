@@ -1,4 +1,4 @@
-
+<a href="https://www.linkedin.com/in/yassine-derkaoui/" rel="nofollow"><img src="https://camo.githubusercontent.com/e49e6d27ba0f51faf70c0c5eb9d1682cf7591d3989dd4b2cf0e65a68e366ee40/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4c696e6b6564496e2d626c61636b2e7376673f7374796c653d666c61742d737175617265266c6f676f3d6c696e6b6564696e26636f6c6f72423d353535" alt="LinkedIn" data-canonical-src="https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&amp;logo=linkedin&amp;colorB=555" style="max-width:100%;"></a>
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -56,12 +56,9 @@ npm start
 
 ### Aperçu de l'application
 
-![image](https://user-images.githubusercontent.com/82156431/114305889-4c627100-9ada-11eb-90d6-d6dcd990197c.png)
 
 
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/yassine-derkaoui/
-[product-screenshot]: images/screenshot.png
+
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
