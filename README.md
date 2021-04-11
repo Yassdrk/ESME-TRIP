@@ -31,11 +31,11 @@ L'interface web a été réalisée en HTML5/CSS/Bootstrap et vuejs. Le serveur w
 
 ### Comment lancer mon projet ?
 
-1) Installez l'api qui se trouve dans le fichier ESME-TRIP-API.RAR à la racine du projet et installez les modules avec la commande suivante :
+1) Installez l'api qui se trouve dans le fichier ESME-TRIP-API.rar à la racine du projet et installez les modules avec la commande suivante :
 ```
 npm install
 ```
-
+N'oubliez pas de lancer pgadmin et d'executer la création de la base de donnée qui se trouve dans le fichier database-pgadmin dans l'archive ESME-TRIP-API.rar
 2) Après l'étape précèdente, démarrez l'api.
 Si vous souhaitez démarrer l'api sur une base de données local (assurez-vous d'avoir installé postgreSQL), exécutez la commande ci-dessous:
 ```
