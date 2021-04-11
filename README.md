@@ -46,14 +46,14 @@ Sinon:
 ```
 npm start 
 ```
-2) Une fois l'API lancée, vous pouvez lancer l'application web. Téléchargez le contenu de la branche Main (excepté le dossier API) et effectuez à la racine du projet les commandes ci-dessous.
+3) Une fois l'API lancée, vous pouvez lancer l'application web. Téléchargez le contenu de la branche Main (excepté le dossier API) et effectuez à la racine du projet les commandes ci-dessous.
 ```
 npm install
 ```
 ```
 npm start
 ```
-3) Tout fonctionne, vous pouvez dès à présent utiliser l'application Web (http://localhost:8080/). N'hésitez pas à me solliciter si vous avez une question sur le lancement du projet ou sur l'application en elle-même.
+4) Tout fonctionne, vous pouvez dès à présent utiliser l'application Web (http://localhost:8080/). N'hésitez pas à me solliciter si vous avez une question sur le lancement du projet ou sur l'application en elle-même.
 
 ### Aperçu de l'application
 <p align="center">
