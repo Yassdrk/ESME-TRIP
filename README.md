@@ -20,7 +20,7 @@
 <!-- ABOUT THE PROJECT -->
 ## À propos du projet
 
-Mon projet intitulé ESME TRIP permet aux agences de voyages de réaliser leur propre application web de réservations de voyages dynamique. L'application proposée est intuitive et réactive.
+Mon projet intitulé ESME TRIP permet aux agences de voyages de réaliser leur propre application web de réservations de voyages. L'application proposée est intuitive et réactive.
 Fonctionnalités incluses: 
 - Système d'inscription et de connexion : authentification des utilisateurs avec mécanismes de sécurité standards (cookies, hashage de mots
 de passe)
