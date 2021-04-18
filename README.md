@@ -24,7 +24,7 @@ Mon projet intitulé ESME TRIP permet aux agences de voyages de réaliser leur p
 Fonctionnalités incluses: 
 - Système d'inscription et de connexion : authentification des utilisateurs avec mécanismes de sécurité standards (cookies, hashage de mots
 de passe)
-- Espace administrateur de gestion du site : gestion des voyages, des séjours et des utilisateurs
+- Espace administrateur de gestion du site : gestion des voyages, des séjours et des utilisateurs. Modification du site : logo, slogan, et meilleures destinations.
 - Recherche dynamique avec autosuggestion.
 
 L'interface web a été réalisée en HTML5/CSS/Bootstrap et vuejs. Le serveur web dispose d'une API, développée en NODEJS.
