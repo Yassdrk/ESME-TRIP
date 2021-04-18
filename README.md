@@ -60,7 +60,7 @@ npm start
 ### Aperçu de l'application
 <p align="center">
 
-![IMG](https://user-images.githubusercontent.com/82156431/115144360-812b7680-a04c-11eb-8e00-34d646d26d8a.png)
+![IMG](https://user-images.githubusercontent.com/82156431/115144432-df585980-a04c-11eb-8b6b-a1d50eb87b5a.png)
 
 
 </p>
