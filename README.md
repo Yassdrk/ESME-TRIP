@@ -40,12 +40,17 @@ N'oubliez pas de lancer pgadmin et d'executer la création de la base de donnée
 2) Après l'étape précèdente, démarrez l'api.
 Si vous souhaitez démarrer l'api sur une base de données local (assurez-vous d'avoir installé postgreSQL), exécutez la commande ci-dessous:
 ```
+npm run serve
+```
+Sinon : 
+```
 npm start localhost
 ```
 Sinon:
 ```
 npm start 
 ```
+
 L'api est lancée à l'adresse suivante : http://localhost:5000/
 
 3) Une fois l'API lancée, vous pouvez lancer l'application web. Téléchargez le contenu de la branche Main (excepté le dossier API) et effectuez à la racine du projet les commandes ci-dessous.
