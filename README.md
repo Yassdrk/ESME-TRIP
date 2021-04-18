@@ -46,6 +46,8 @@ Sinon:
 ```
 npm start 
 ```
+L'api est lancée à l'adresse suivante : http://localhost:5000/
+
 3) Une fois l'API lancée, vous pouvez lancer l'application web. Téléchargez le contenu de la branche Main (excepté le dossier API) et effectuez à la racine du projet les commandes ci-dessous.
 ```
 npm install
