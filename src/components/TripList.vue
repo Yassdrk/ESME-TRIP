@@ -25,7 +25,10 @@
   <li class="nav-item">
 	<router-link class="nav-link" to="/admin/adddate">Ajouter un séjour</router-link>
   </li>
- 
+   <li class="nav-item">
+	<router-link class="nav-link" to="/admin/settings">Paramètres</router-link>
+  </li>
+
 </ul>
 
 <div v-if="loading"><div  class="d-flex justify-content-center mt-3">
@@ -37,6 +40,7 @@
       <th scope="col">ID</th>
       <th scope="col">Voyage</th>
       <th scope="col">Description</th>
+      <th scope="col">Best Seller (min-max:4)</th>
       <th scope="col">Suppr</th>
     </tr>
   </thead>
@@ -45,6 +49,10 @@
       <th scope="row">{{ item.id_voyage }}</th>
       <td>{{ item.nom_voyage }}</td>
       <td>{{ item.description }}</td>
+      
+      <td><form v-on:submit.prevent="removeBest(item.id_voyage)" v-if="item.bestseller == '1'"><button type="submit" class="btn2 btn-warning"><i class="fas fa-minus" aria-hidden="true"></i></button></form><form v-on:submit.prevent="addBest(item.id_voyage)" v-else><button type="submit" class="btn2 btn-success"><i class="far fa-plus-square" aria-hidden="true"></i></button></form>
+</td>
+
       <td><form  v-on:submit.prevent="submit(item.id_voyage)">
 <button type="submit" class="btn1 btn-danger"><i class="fa fa-trash" aria-hidden="true"></i>
 </button></form></td>
@@ -95,7 +103,7 @@ export default {
     this.getTripList()
     ;
     
-}, 1000);
+}, 500);
   
     
     
@@ -121,6 +129,29 @@ export default {
 
     async submit(id){
         axios.delete(`http://localhost:5000/delete/voyages/${id}`)
+    },
+
+    async removeBest(id){
+        
+        console.log("Suppression de: "+id)
+const data = {
+				valeur: "0",
+				}
+        axios.put(`http://localhost:5000/best/${id}`,data)
+      
+  
+		
+    },
+     async addBest(id){
+        
+        console.log("Ajout de: "+id)
+      const data1 = {
+				valeur: "1",
+				}
+        axios.put(`http://localhost:5000/best/${id}`,data1)
+
+  
+		
     }
 	},
 	async mounted () {
@@ -169,6 +200,25 @@ export default {
     -ms-user-select: none;
     user-select: none;
     border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+
+}
+.btn2{
+	display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 0px solid transparent;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;

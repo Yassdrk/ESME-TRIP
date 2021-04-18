@@ -16,6 +16,8 @@ import UserList from './components/UserList'
 import Success from './components/Success'
 import TripList from './components/TripList'
 import SejourList from './components/SejourList'
+import Settings from './components/Settings'
+
 
 import Checkout from './components/Checkout'
 import Assistance from './components/Assistance'
@@ -47,6 +49,12 @@ const routes = [
     is_admin: true,
     requiresAuth: true,
     } },
+    { path:  '/admin/settings', component: Settings,
+    meta: {
+      is_admin: true,
+      requiresAuth: true,
+      } },
+     
 
 
  { 

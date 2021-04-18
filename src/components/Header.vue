@@ -2,8 +2,8 @@
   <div class="Header">
     <section class="hero d-flex align-items-center">
       <div class="container">
-        <h1 style="text-shadow: 2px 2px 10px black;">Découvrez nos voyages<span > d'exception...</span></h1>
-        <p class="text-hero" style="text-shadow: 2px 2px 10px black;">Laissez-vous embarquer dans l'une de nos destinations merveilleuses.</p>
+        <h1 style="text-shadow: 2px 2px 10px black;">{{voyages.big_text}}</h1>
+        <p class="text-hero" style="text-shadow: 2px 2px 10px black;">{{voyages.small_text}}</p>
         <div class="col-sm-12 ">
           
             <div class="search">
@@ -51,16 +51,23 @@ export default {
 		return{
     query:null,
     searchResults:[],
+    voyages: [],
 
     }
 	},
    created() {
     
     this.getSearchResults();
+     this.getText();
+    this.setIntervalId = setInterval(() => {
+    this.getText();
+    }, 1000);
+    
    
    
     this.setIntervalId = setInterval(() => {
     this.getSearchResults()
+
     ;
     
 }, 10);
@@ -83,8 +90,16 @@ export default {
       }
     },
  
-    
+    async getText(){
+    try{
+      const txt = await axios.get('http://localhost:5000/text');
+      this.voyages = txt.data;
+    }catch(err) {
+        console.log(err); // handle errors here...
+      }
   }
+  },
+  
 }
 
 </script>

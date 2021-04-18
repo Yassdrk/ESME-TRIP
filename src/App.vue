@@ -13,7 +13,10 @@
             
     
     
-        <a class="navbar-brand mx-2 " href=""><img src="../src/assets/ESME TRIP.png" width="150px"></a>
+        <a class="navbar-brand mx-2 " href="">
+          <img :src="'http://localhost:5000/'+`${voyages.logo_name}`" width="150px">
+         
+          </a>
             <router-link class="nav-link font-nav" to="/assistance">Assistance</router-link>
              <router-link class="nav-link font-nav" to="/login">Compte</router-link>
           </div>
@@ -26,13 +29,51 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
+Vue.use(VueAxios, axios)
 
 
 
 
 export default {
-  name: 'App'
+  name: 'App',
+
+
+
+
+   data () {
+    return {
+    voyages: [],
+    loading: false,
+    setIntervalId: null,
+    }
+  },
+  created() {
+    this.getVoyage();
+    this.setIntervalId = setInterval(() => {
+    this.getVoyage();
+    }, 1000);
+  },
+  beforeDestroy() {
+    clearInterval(this.setIntervalId);
+  },
+  methods: {
+    async getVoyage() {
+    this.loading = true;
+      try {
+        const voyages = await axios.get('http://localhost:5000/logo/');
+        this.voyages = voyages.data;
+        this.loading = false;
+      } catch(err) {
+        console.log(err); // handle errors here...
+      }
+    },
+   
+  
+  }
 }
 
 
@@ -104,7 +145,6 @@ input.form-control{
     width:80%;
 }
 #section{
-	height:700px;
 	background-color:#002060;
 	font-family: 'Poppins', sans-serif;
 	text-align:center;
@@ -124,8 +164,9 @@ input.form-control{
   outline: none;
 }
 #cards_landscape_wrap-2 .card-flyer {
-  border-radius: 3px;
+  border-radius: 2px;
   overflow:hidden;
+  height:500px;
 }
 #cards_landscape_wrap-2 .card-flyer .image-box{
   background: #ffffff;
@@ -258,7 +299,7 @@ button.btn.btn-dark{
   color: white;
   background-color: #06B1FC;  
   font-size: 18px;
-  bottom: 37.5px;
+  bottom: 36.5px;
   position: relative;
   text-decoration:none;
   border-radius: 0px;

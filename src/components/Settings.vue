@@ -1,5 +1,5 @@
 <template>
-  <div class="AddTrip">
+  <div class="AddDate">
       <div class="global-container">
 	<div class="card login-form">
 	<div class="card-body">
@@ -20,46 +20,34 @@
     <router-link class="nav-link" to="/admin/userlist">Liste des utilisateurs</router-link>
   </li>
   <li class="nav-item">
-	<router-link class="nav-link active" to="/admin/addtrip">Ajouter un voyage</router-link>
+	<router-link class="nav-link" to="/admin/addtrip">Ajouter un voyage</router-link>
   </li>
- <li class="nav-item">
+  <li class="nav-item">
 	<router-link class="nav-link" to="/admin/adddate">Ajouter un séjour</router-link>
   </li>
-    <li class="nav-item">
-	<router-link class="nav-link" to="/admin/settings">Paramètres</router-link>
+  <li class="nav-item">
+	<router-link class="nav-link active" to="/admin/settings">Paramètres</router-link>
   </li>
 
 </ul>
-<div v-html="ERREUR"></div>
+
+
 <div v-html="Good"></div>
-
-
 <form method="post" enctype="multipart/form-data" v-on:submit.prevent="submit">
+<div class="form-group">
+	<label for="exampleFormControlInput1">Logo de mon site :<span style="color:red">*</span></label>
+	</div>	<input type="file" class="form-control" ref="file" id="upload" name="file" @change="uploadImage()" accept="image/x-png,image/jpeg,image/jpg">
+<div class="form-group">
+    <label for="exampleFormControlInput1">Modifier le titre 1 : <span style="color:red">*</span></label>
+	</div>
+    <input type="text" class="form-control" v-model="modif_text1">
 	<div class="form-group">
-	<label for="exampleFormControlInput1">Photos du voyage<span style="color:red">*</span></label>
+    <label for="exampleFormControlInput1">Modifier le titre 2 : <span style="color:red">*</span></label>
 	</div>
-	<div class="input-group mb-3">
-	<input type="file" class="form-control" ref="file" id="upload" name="file" multiple="multiple" @change="uploadImage()" accept="image/x-png,image/jpeg,image/jpg">
-	</div>
-	<div class="form-group">
-    <label for="exampleFormControlInput1">Titre du voyage <span style="color:red">*</span></label>
-	</div>
-    <input type="text" v-model.trim="nom_voyage" :class="{'is-invalid': validationStatus($v.nom_voyage)}" class="form-control" id="nom_voyage" placeholder="ex: Roadtrip au Kenya" >
-	<div v-if="!$v.nom_voyage.required" class="invalid-feedback">Le nom du voyage est obligatoire.</div>
-	<div class="form-group">
-	<label for="exampleFormControlInput1">Description brève <span style="color:red">*</span></label>
-    <input type="text" v-model.trim="description" :class="{'is-invalid': validationStatus($v.description)}" class="form-control" id="description" placeholder="ex: Découvrez la faune et la flore de notre pays exceptionnel" >
-	<div v-if="!$v.description.required" class="invalid-feedback">La description du voyage est obligatoire.</div>
-	</div>
-	<div class="form-group">
-	<label for="exampleFormControlTextarea1">Description détaillée <span style="color:red">*</span></label>
-    <textarea class="form-control" v-model.trim="description_detaillee" :class="{'is-invalid': validationStatus($v.description_detaillee)}" style="font-size:14px" id="description_detaillee" rows="3" placeholder="ex: Au coeur d'un parc régional au Kenya, partez au coeur de la réserve nationale du masai mara..."></textarea>
-	<div v-if="!$v.description_detaillee.required" class="invalid-feedback">La description détaillée est obligatoire.</div>
-	</div>
+    <input type="text" class="form-control" v-model="modif_text2">
 	
-<button class="btn btn_sign_in" type="submit">Publier</button>
+<button class="btn btn_sign_in" type="submit">Modifier</button>
 </form>
-
 </div>
 	
 </div>
@@ -71,7 +59,6 @@
 
 <script>
 import Footer from './Footer'
-import { required } from 'vuelidate/lib/validators'
 import axios from 'axios'
 import Vue from 'vue'
 import VueAxios from 'vue-axios'
@@ -83,35 +70,21 @@ Vue.use(VueCookies);
 
 export default {
 
-	name: 'AddTrip',
+	name: 'Settings',
 	components:{
-		Footer
+		Footer,
 	},
 	data: function(){
 
 		return{
-		results: {},
-        nom_voyage: null,
-        description: null,
-        description_detaillee: null,
-        ERREUR: null,
-		file:'', 
-		Good: null,
-		nom_photos:null,
+		
       }
 	},
 	validations: {
-    nom_voyage:{required},
-    description:{required},
-    description_detaillee:{required},
-    
+  
 	},
 	methods:{
-
-		validationStatus: function(validation) {
-			return typeof validation != "undefined" ? validation.$error : false;    
-		},
-		uploadImage() {
+	uploadImage() {
 	
     const URL = 'http://localhost:5000/upload'; 
 	this.file = this.$refs.file.files[0];
@@ -143,31 +116,47 @@ export default {
       }
     )
   },
-		submit: function(){
-			this.$v.$touch();
-			if (this.$v.$pendding || this.$v.$error) return;
+  
+  submit: function(){
+			
 
 				const data = {
-				nom_voyage: this.nom_voyage,
-				description: this.description,
-				description_detaillee: this.description_detaillee,
-				photos: this.nom_photos,
-
-			};
-			this.axios.post("http://localhost:5000/voyages/", data)
+				photo: this.nom_photos,
+				}
+			if(this.nom_photos != null) {	
+			this.axios.put("http://localhost:5000/logo/", data)
 			.catch(error => {
 				console.clear()
 				this.ERREUR = `<div class='alert alert-danger' style='margin-bottom:-20px;margin-top:20px;' role='alert'/>`+error.response.data.message+`</div>`;
 				
 			})
+			}
+		
 			
 			
 			this.Good = `<div class='alert alert-success' style='margin-bottom:-20px;margin-top:20px;' role='alert'/>Le voyage a bien été publié. 😎</div>`;
+		
+		
+			const data1 = {
+				titre1: this.modif_text1,
+				titre2: this.modif_text2,
+			}
+			console.log(this.modif_text1)
+			if(typeof(this.modif_text1) !== "undefined" && typeof(this.modif_text2) !== "undefined"){
+			this.axios.put("http://localhost:5000/titre/", data1)
+			.catch(error => {
+				console.clear()
+				this.ERREUR = `<div class='alert alert-danger' style='margin-bottom:-20px;margin-top:20px;' role='alert'/>`+error.response.data.message+`</div>`;
+				
+			})
+			}else{
+				console.log("Les titres sont vides!")
+			}
+			
 		},
-	
 		
 	},
-	async mounted () {
+		async mounted () {
         console.log(localStorage.getItem('admin'))
 		if(localStorage.getItem('admin') != 1){
 			this.$router.push('/compte')

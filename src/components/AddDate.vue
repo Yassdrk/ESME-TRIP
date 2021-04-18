@@ -25,7 +25,10 @@
   <li class="nav-item">
 	<router-link class="nav-link active" to="/admin/adddate">Ajouter un séjour</router-link>
   </li>
- 
+   <li class="nav-item">
+	<router-link class="nav-link" to="/admin/settings">Paramètres</router-link>
+  </li>
+  
 </ul>
 
 
